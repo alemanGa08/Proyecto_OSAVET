@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Veterinaria OSAVET"),
-        backgroundColor: Color(0xFFece5ce),
+        backgroundColor: const Color(0xFFa7e3c1),
       ),
       drawer: Drawer(
         child: ListView(
@@ -24,21 +24,12 @@ class HomeScreen extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    Color(0xFFece5ce),
-                    Color(0xFFece5ce),
-                    Color(0xFFf9f4e3),
-                    
-                  ],
-                ),
+                color: Color(0xFF59a68c),
               ),
               child: Text(
                 'Opciones',
                 style: TextStyle(
-                  color: Color.fromRGBO(146, 219, 224, 1),
+                  color: Color(0xFF000000),
                   fontSize: 24,
                 ),
               ),
@@ -130,17 +121,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.all(16.0),
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFFece5ce),
-              Color(0xFFece5ce),
-              Color(0xFFf9f4e3),
-            ],
-          ),
-        ),
+        color: const Color(0xFF59a68c),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -148,64 +129,61 @@ class HomeScreen extends StatelessWidget {
             const Text(
               'Perfil del Administrador',
               style: TextStyle(
-                color: Color.fromARGB(255, 41, 43, 49),
+                color: Color(0xFF000000),
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 20),
-            Card(
-              color: Colors.white70,
+            const Card(
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.person, color: Colors.grey[700]),
-                title: const Text('Nombre del Administrador'),
-                subtitle: const Text('admin@osavet.com'),
+                leading: Icon(Icons.person, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Nombre del Administrador'),
+                subtitle: Text('admin@osavet.com'),
               ),
             ),
             const SizedBox(height: 10),
             ElevatedButton.icon(
               icon: const Icon(Icons.edit),
-              label: const Text('Editar Perfil'),
+              label: const Text('Editar Perfil', style: TextStyle(color: Colors.black)),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFdcedc2),
+                backgroundColor: const Color(0xFFa7e3c1),
               ),
               onPressed: () {
-                // Navegar a la pantalla de edición de perfil
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EditProfileScreen()),
+                  MaterialPageRoute(builder: (context) => const EditProfileScreen()),
                 );
               },
             ),
             const SizedBox(height: 20),
             Card(
-              color: Colors.white70,
+              color: const Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.analytics, color: Colors.grey[700]),
+                leading: const Icon(Icons.analytics, color: Color(0xFFa7e3c1)),
                 title: const Text('Estadísticas de Uso'),
                 subtitle: const Text('Visualizar estadísticas de la aplicación'),
                 onTap: () {
-                  // Navegar a la pantalla de estadísticas
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => StatisticsScreen()),
+                    MaterialPageRoute(builder: (context) => const StatisticsScreen()),
                   );
                 },
               ),
             ),
             const SizedBox(height: 10),
             Card(
-              color: Colors.white70,
+              color: const Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.settings, color: Colors.grey[700]),
+                leading: const Icon(Icons.settings, color: Color(0xFFa7e3c1)),
                 title: const Text('Configuración'),
                 subtitle: const Text('Ajustar configuraciones de la aplicación'),
                 onTap: () {
-                  // Navegar a la pantalla de configuración
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SettingsScreen()),
+                    MaterialPageRoute(builder: (context) => const SettingsScreen()),
                   );
                 },
               ),
@@ -218,25 +196,27 @@ class HomeScreen extends StatelessWidget {
 }
 
 class EditProfileScreen extends StatelessWidget {
+  const EditProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Editar Perfil'),
-        backgroundColor: const Color(0xFF010002),
+        backgroundColor: const Color(0xFFa7e3c1),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Nombre',
                 border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 20),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Correo electrónico',
                 border: OutlineInputBorder(),
@@ -249,9 +229,9 @@ class EditProfileScreen extends StatelessWidget {
                 Navigator.pop(context);
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF3a6186),
+                backgroundColor: const Color(0xFFa7e3c1),
               ),
-              child: const Text('Guardar'),
+              child: const Text('Guardar', style: TextStyle(color: Colors.black)),
             ),
           ],
         ),
@@ -261,86 +241,89 @@ class EditProfileScreen extends StatelessWidget {
 }
 
 class StatisticsScreen extends StatelessWidget {
+  const StatisticsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Estadísticas de Uso'),
-        backgroundColor: const Color(0xFF2c3e50),
+        backgroundColor: const Color(0xFFa7e3c1),
       ),
-      body: Padding(
+      body: Container(
         padding: const EdgeInsets.all(16.0),
+        color: const Color(0xFF59a68c),
         child: ListView(
-          children: [
+          children: const [
             Card(
-              color: Colors.white70,
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.calendar_today, color: Colors.grey[700]),
-                title: const Text('Citas Programadas'),
-                subtitle: const Text('Total: 123\nEsta semana: 45\nHoy: 8'),
+                leading: Icon(Icons.calendar_today, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Citas Programadas'),
+                subtitle: Text('Total: 123\nEsta semana: 45\nHoy: 8'),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Card(
-              color: Colors.white70,
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.person_add, color: Colors.grey[700]),
-                title: const Text('Nuevos Clientes'),
-                subtitle: const Text('Total: 50\nEsta semana: 10\nHoy: 2'),
+                leading: Icon(Icons.person_add, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Nuevos Clientes'),
+                subtitle: Text('Total: 50\nEsta semana: 10\nHoy: 2'),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Card(
-              color: Colors.white70,
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.pets, color: Colors.grey[700]),
-                title: const Text('Nuevas Mascotas'),
-                subtitle: const Text('Total: 70\nEsta semana: 15\nHoy: 3'),
+                leading: Icon(Icons.pets, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Nuevas Mascotas'),
+                subtitle: Text('Total: 70\nEsta semana: 15\nHoy: 3'),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Card(
-              color: Colors.white70,
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.attach_money, color: Colors.grey[700]),
-                title: const Text('Facturación'),
-                subtitle: const Text('Ingresos: \$5000\nEsta semana: \$1200\nHoy: \$300'),
+                leading: Icon(Icons.attach_money, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Facturación'),
+                subtitle: Text('Ingresos: \$5000\nEsta semana: \$1200\nHoy: \$300'),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Card(
-              color: Colors.white70,
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.notifications, color: Colors.grey[700]),
-                title: const Text('Notificaciones Enviadas'),
-                subtitle: const Text('Total: 200\nEsta semana: 40\nHoy: 8'),
+                leading: Icon(Icons.notifications, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Notificaciones Enviadas'),
+                subtitle: Text('Total: 200\nEsta semana: 40\nHoy: 8'),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Card(
-              color: Colors.white70,
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.assessment, color: Colors.grey[700]),
-                title: const Text('Tasa de Retención de Clientes'),
-                subtitle: const Text('80% de clientes recurrentes'),
+                leading: Icon(Icons.assessment, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Tasa de Retención de Clientes'),
+                subtitle: Text('80% de clientes recurrentes'),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Card(
-              color: Colors.white70,
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.vaccines, color: Colors.grey[700]),
-                title: const Text('Vacunas Administradas'),
-                subtitle: const Text('Total: 150\nEsta semana: 20\nHoy: 5'),
+                leading: Icon(Icons.vaccines, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Vacunas Administradas'),
+                subtitle: Text('Total: 150\nEsta semana: 20\nHoy: 5'),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Card(
-              color: Colors.white70,
+              color: Color(0xFFffffff),
               child: ListTile(
-                leading: Icon(Icons.feedback, color: Colors.grey[700]),
-                title: const Text('Comentarios y Sugerencias'),
-                subtitle: const Text('Total: 30\nEsta semana: 5\nHoy: 1'),
+                leading: Icon(Icons.feedback, color: Color.fromARGB(255, 0, 0, 0)),
+                title: Text('Comentarios y Sugerencias'),
+                subtitle: Text('Total: 30\nEsta semana: 5\nHoy: 1'),
               ),
             ),
           ],
@@ -351,17 +334,23 @@ class StatisticsScreen extends StatelessWidget {
 }
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Configuración'),
-        backgroundColor: const Color(0xFF2c3e50),
+        backgroundColor: const Color(0xFFa7e3c1),
       ),
-      body: Center(
-        child: Text(
-          'Aquí se podrán ajustar las configuraciones de la aplicación.',
-          style: TextStyle(fontSize: 18),
+      body: Container(
+        padding: const EdgeInsets.all(16.0),
+        color: const Color(0xFF59a68c),
+        child: const Center(
+          child: Text(
+            'Aquí se podrán ajustar las configuraciones de la aplicación.',
+            style: TextStyle(fontSize: 18, color: Colors.black),
+          ),
         ),
       ),
     );

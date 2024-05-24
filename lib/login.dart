@@ -49,25 +49,33 @@ class LoginScreen extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color(0xFF72EDF2),
-                Color(0xFF5151E5),
+                Color(0xFF59a68c),
+                Color(0xFF59a68c),
               ],
             ),
           ),
           child: Stack(
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Agregar la imagen aquí
+                  const Spacer(flex: 2),
                   Center(
-                    child: Image.asset(
-                      'assets/logo.png', // imagen
-                      height: 200, // Ajusta el tamaño según tus necesidades
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/logo.png', // imagen
+                          height: 200, // Ajusta el tamaño según tus necesidades
+                        ),
+                        const SizedBox(width: 15), // Espacio entre las imágenes
+                        Image.asset(
+                          'assets/veterinaria.png', // imagen
+                          height: 200, // Ajusta el tamaño según tus necesidades
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(
-                      height: 20), // Espacio entre la imagen y el formulario
+                  const SizedBox(height: 20), // Espacio entre la imagen y el formulario
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
@@ -112,28 +120,25 @@ class LoginScreen extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.8,
                           height: 40,
                           child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFFa7e3c1), // Color del fondo del botón
+                            ),
                             onPressed: () {
                               _login(context);
                             },
-                            child: const Text('Ingresar'),
+                            child: const Text(
+                              'Ingresar',
+                              style: TextStyle(
+                                color: Colors.black, // Color del texto del botón
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
+                  const Spacer(flex: 2),
                 ],
-              ),
-              Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: SizedBox(
-                  height: 155,
-                  child: Image.asset(
-                    'assets/veterinaria.png',
-                    fit: BoxFit.cover,
-                  ),
-                ),
               ),
             ],
           ),

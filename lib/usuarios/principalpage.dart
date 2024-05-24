@@ -66,8 +66,8 @@ class _PrincipalPageState extends State<PrincipalPage>
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xFF72EDF2),
-            Color(0xFF5151E5),
+            Color(0xFF59a68c),
+            Color(0xFF59a68c),
           ],
         ),
       ),
@@ -86,8 +86,8 @@ class _PrincipalPageState extends State<PrincipalPage>
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color(0xFF72EDF2),
-                  Color(0xFF72EDF2),
+                  Color(0xFFa7e3c1),
+                  Color(0xFFa7e3c1),
                 ],
               ),
             ),
@@ -104,8 +104,8 @@ class _PrincipalPageState extends State<PrincipalPage>
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color(0xFF72EDF2),
-                      Color(0xFF72EDF2),
+                      Color(0xFFa7e3c1),
+                      Color(0xFFa7e3c1),
                     ],
                   ),
                 ),
@@ -120,7 +120,7 @@ class _PrincipalPageState extends State<PrincipalPage>
               ListTile(
                 leading: const Icon(Icons.info, color: Colors.black),
                 title: const Text('Información',
-                    style: TextStyle(color: Color.fromARGB(255, 8, 8, 8))),
+                    style: TextStyle(color: Colors.black)),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -132,8 +132,7 @@ class _PrincipalPageState extends State<PrincipalPage>
               ),
               ListTile(
                 leading: const Icon(Icons.calendar_today, color: Colors.black),
-                title:
-                    const Text('Citas', style: TextStyle(color: Colors.black)),
+                title: const Text('Citas', style: TextStyle(color: Colors.black)),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -145,8 +144,7 @@ class _PrincipalPageState extends State<PrincipalPage>
               ),
               ListTile(
                 leading: const Icon(Icons.contact_mail, color: Colors.black),
-                title: const Text('Contacto',
-                    style: TextStyle(color: Colors.black)),
+                title: const Text('Contacto', style: TextStyle(color: Colors.black)),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -158,8 +156,7 @@ class _PrincipalPageState extends State<PrincipalPage>
               ),
               ListTile(
                 leading: const Icon(Icons.photo_library, color: Colors.black),
-                title: const Text('Galería',
-                    style: TextStyle(color: Colors.black)),
+                title: const Text('Galería', style: TextStyle(color: Colors.black)),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -171,8 +168,7 @@ class _PrincipalPageState extends State<PrincipalPage>
               ),
               ListTile(
                 leading: const Icon(Icons.event, color: Colors.black),
-                title: const Text('Recursos & Eventos',
-                    style: TextStyle(color: Colors.black)),
+                title: const Text('Recursos & Eventos', style: TextStyle(color: Colors.black)),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -184,8 +180,7 @@ class _PrincipalPageState extends State<PrincipalPage>
               ),
               ListTile(
                 leading: const Icon(Icons.notifications, color: Colors.black),
-                title: const Text('Noticias',
-                    style: TextStyle(color: Colors.black)),
+                title: const Text('Noticias', style: TextStyle(color: Colors.black)),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -198,8 +193,7 @@ class _PrincipalPageState extends State<PrincipalPage>
               const Divider(color: Colors.black),
               ListTile(
                 leading: const Icon(Icons.login, color: Colors.black),
-                title: const Text('Iniciar sesión',
-                    style: TextStyle(color: Colors.black)),
+                title: const Text('Iniciar sesión', style: TextStyle(color: Colors.black)),
                 onTap: () {
                   Navigator.push(
                     context,
