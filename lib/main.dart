@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart'; // Importa el paquete firebase_auth
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_osavet_1/admin/home.dart';
-import 'usuarios/principalpage.dart';
+import 'usuarios/principalpage.dart'; // Asegúrate de importar principalpage.dart
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,8 +18,7 @@ Future<void> main() async {
     ),
   );
 
-  final FirebaseAuth _auth =
-      FirebaseAuth.instance; // Crea una instancia de FirebaseAuth
+  final FirebaseAuth _auth = FirebaseAuth.instance; // Crea una instancia de FirebaseAuth
 
   User? user = _auth.currentUser; // Verifica si el usuario está autenticado
   if (user != null) {
@@ -31,8 +30,7 @@ Future<void> main() async {
 
     try {
       // Auténtica al usuario con correo electrónico y contraseña
-      final UserCredential userCredential =
-          await _auth.signInWithEmailAndPassword(
+      final UserCredential userCredential = await _auth.signInWithEmailAndPassword(
         email: 'usuario@example.com',
         password: 'contraseña',
       );
@@ -41,17 +39,6 @@ Future<void> main() async {
       print('Error al autenticar al usuario: $e');
     }
   }
-
-  // Verifica las reglas de seguridad de Firebase Storage
-  // rules_version = '2';
-  // service firebase.storage {
-  //   match /b/{bucket}/o {
-  //     match /{allPaths=**} {
-  //       allow read: if request.auth != null;
-  //       allow write: if false;
-  //     }
-  //   }
-  // }
 
   runApp(const MyApp());
 }
@@ -67,7 +54,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),//PrincipalPage(),
+      home: const PrincipalPage(), // Cambiado a PrincipalPage
     );
   }
 }

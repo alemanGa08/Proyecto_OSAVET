@@ -39,8 +39,8 @@ class _InformacionPageState extends State<InformacionPage>
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xFF72EDF2),
-            Color(0xFF5151E5),
+            Color(0xFF59a68c),
+            Color(0xFF59a68c),
           ],
         ),
       ),
@@ -52,12 +52,15 @@ class _InformacionPageState extends State<InformacionPage>
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color(0xFF72EDF2),
-                  Color(0xFF72EDF2),
+                  Color(0xFF59a68c),
+                  Color(0xFF59a68c),
                 ],
               ),
             ),
           ),
+          title: const Text('Información'),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
         ),
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
@@ -82,7 +85,7 @@ class _InformacionPageState extends State<InformacionPage>
                 const SizedBox(height: 16.0),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.black.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   padding: const EdgeInsets.all(16.0),
@@ -94,12 +97,13 @@ class _InformacionPageState extends State<InformacionPage>
                         style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                       SizedBox(height: 8.0),
                       Text(
                         'Osavet es una clínica veterinaria dedicada a brindar atención médica de calidad para mascotas. Contamos con un equipo de profesionales altamente capacitados y comprometidos con el bienestar de los animales.',
-                        style: TextStyle(fontSize: 16.0),
+                        style: TextStyle(fontSize: 16.0, color: Colors.white),
                       ),
                     ],
                   ),
@@ -107,7 +111,7 @@ class _InformacionPageState extends State<InformacionPage>
                 const SizedBox(height: 16.0),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.black.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   padding: const EdgeInsets.all(16.0),
@@ -119,12 +123,13 @@ class _InformacionPageState extends State<InformacionPage>
                         style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                       SizedBox(height: 8.0),
                       Text(
                         'Ser líderes en la atención veterinaria, brindando un servicio excepcional y promoviendo la salud y el bienestar de las mascotas.',
-                        style: TextStyle(fontSize: 16.0),
+                        style: TextStyle(fontSize: 16.0, color: Colors.white),
                       ),
                     ],
                   ),
@@ -132,7 +137,7 @@ class _InformacionPageState extends State<InformacionPage>
                 const SizedBox(height: 16.0),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.black.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   padding: const EdgeInsets.all(16.0),
@@ -144,12 +149,13 @@ class _InformacionPageState extends State<InformacionPage>
                         style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                       SizedBox(height: 8.0),
                       Text(
                         'Brindar un servicio veterinario integral, utilizando tecnología de vanguardia y promoviendo la educación y la prevención para garantizar el bienestar de las mascotas y sus dueños.',
-                        style: TextStyle(fontSize: 16.0),
+                        style: TextStyle(fontSize: 16.0, color: Colors.white),
                       ),
                     ],
                   ),
@@ -157,7 +163,7 @@ class _InformacionPageState extends State<InformacionPage>
                 const SizedBox(height: 16.0),
                 Center(
                   child: Image.asset(
-                    'assets/veterinaria.png',
+                    'assets/veterinarios.png',
                     height: 200.0,
                     fit: BoxFit.contain,
                   ),
